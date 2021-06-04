@@ -3,6 +3,9 @@ kind: Workflow
 metadata:
   generateName: hello-world-parameters-
 spec:
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 8737 #; any non-root user
   entrypoint: whalesay
   arguments:
     parameters:
