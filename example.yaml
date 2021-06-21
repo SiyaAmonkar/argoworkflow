@@ -10,7 +10,7 @@ spec:
   arguments:
     parameters:
       - name: message
-        value: hello world
+        value: bye world
   templates:
     - name: whalesay
       inputs:
@@ -19,4 +19,4 @@ spec:
       container:
         image: docker/whalesay
         command: [ cowsay ]
-        args: [ "{{inputs.parameters.messge}}" ] 
+        args: [ "{{inputs.parameters.message}}" ] 
