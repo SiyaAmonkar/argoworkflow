@@ -3,6 +3,9 @@ kind: Workflow
 metadata:
   name: hello-world-workflow
 spec:
+  retryStrategy:
+    retryPolicy: OnError
+    limit: 1
   entrypoint: whalesay
   arguments:
     parameters:
